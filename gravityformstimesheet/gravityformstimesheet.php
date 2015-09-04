@@ -175,12 +175,10 @@
 							?>
 						</tbody>
 					</table>
-
 					<script>
 						jQuery( document ).ready( function() {
 							var timesheet = jQuery( '#ginput_timesheet-<?php echo esc_attr( $field['id'] ); ?>' );
 							var maxrows = <?php echo json_encode( $maxrows ); ?>;
-
 							var hide_buttons = function() {
 								if ( timesheet.find( 'tr.gfield_timesheet_row' ).length < 2 ) timesheet.find( '.delete_list_item' ).css( 'visibility', 'hidden' );
 								else timesheet.find( '.delete_list_item' ).css( 'visibility', '' );
@@ -188,9 +186,7 @@
 								if ( timesheet.find( 'tr.gfield_timesheet_row' ).length >= maxrows ) timesheet.find( '.add_list_item' ).css( 'visibility', 'hidden' );
 								else timesheet.find( '.add_list_item' ).css( 'visibility', '' );
 							};
-
 							hide_buttons();
-
 							timesheet.on( 'click', '.add_list_item', function( e ) {
 								e.preventDefault();
 								if ( maxrows > 0 && timesheet.find( 'tr.gfield_timesheet_row' ).length >= maxrows ) return false;
@@ -202,7 +198,6 @@
 								gformInitDatepicker();
 								return false;
 							} );
-
 							timesheet.on( 'click', '.delete_list_item', function( e ) {
 								e.preventDefault();
 								if ( timesheet.find( 'tr.gfield_timesheet_row' ).length < 2 ) return false;
