@@ -47,6 +47,7 @@
 					$group['fields'][] = array(
 						'class' => 'button',
 						'value' => __( 'Timesheet', self::$_translation_domain ),
+						'data-type' => 'timesheet',
 						'onclick' => "StartAddField( 'timesheet' );"
 					);
 					break;
