@@ -25,4 +25,4 @@ Installation
 
 Download the latest release from the [Releases](https://github.com/soulseekah/gravityformstimesheet/releases) page, unzip and copy the `gravityformstimesheet/` directory into your `wp-content/plugins` directory. Activate the plugin and enjoy.
 
-Requires at least Gravity Forms 1.8 and WordPress 3.8.
+Requires at least Gravity Forms 1.9 and WordPress 4.0.
