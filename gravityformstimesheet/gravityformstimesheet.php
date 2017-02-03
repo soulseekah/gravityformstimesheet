@@ -344,7 +344,7 @@
 			$value = $this->unserialize( html_entity_decode( $value ) );
 			$minutes = 0;
 			foreach ( $value as $entry ):
-				if ( $this->timeFormat == '12' ) {
+				if ( $this->timeFormat != '24' ) {
 					if ( $entry['checkin_24'] == 'am' && intval( $entry['checkin_hour'] ) == 12 ) $entry['checkin_hour'] = 0;
 					if ( $entry['checkin_24'] == 'pm' && $entry['checkin_hour'] != 12 ) $entry['checkin_hour'] += 12;
 					if ( $entry['checkout_24'] == 'pm' && $entry['checkout_hour'] != 12 ) $entry['checkout_hour'] += 12;
